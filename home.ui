@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>811</width>
+    <height>678</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Ufolep - BMX Race</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow {
+	margin: 0px;
+padding! 0px
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="header" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+}
+
+/*boutons :*/
+#wButtons {
+	max-width: 400px;
+}
+
+#btnClubs {
+	max-width: 80px;
+
+}
+#btnTitulaires {
+	max-width: 105px;
+}
+#btnChampoinnat {
+	max-width: 150px;
+}
+
+#btnDeconnexion {
+	color: #dc3545;
+	border: 1px solid #dc3545;
+	border-radius:5px;
+}
+
+#btnDeconnexion:hover {
+	background-color: #dc3545;
+	color: white;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QWidget" name="wLogo" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>230</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>img/logo.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="wButtons" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="btnClubs">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Club&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(0, 0, 0, .55);
+border: none;</string>
+            </property>
+            <property name="text">
+             <string>Clubs</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnTitulaires">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>105</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>105</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(0, 0, 0, .55);
+cursor: pointer;
+border: none;</string>
+            </property>
+            <property name="text">
+             <string>Titulaires</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnChampionnats">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(0, 0, 0, .55);
+cursor: pointer;
+border: none;</string>
+            </property>
+            <property name="text">
+             <string>Championnats</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QWidget" name="wDeconnexion" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="btnDeconnexion">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Déconnexion</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainBody" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QStackedWidget" name="wStacked">
+         <property name="styleSheet">
+          <string notr="true">#lblAddTitulaire{
+	font-weight: 200;
+	font-family: open-sans;
+	font-size: 25px;
+	color: #212529;
+
+}
+
+#tituLeft {
+	background-color : #E9ECEF;
+}
+
+</string>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="wClubs">
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>50</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>non</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="wTitulaires">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item alignment="Qt::AlignTop">
+            <widget class="QWidget" name="tituLeft" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>500</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>800</height>
+              </size>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">* {
+color: grey;
+}</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="wTituTitle" native="true">
+                <property name="styleSheet">
+                 <string notr="true">color: black;</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="lblAddTitulaire">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Ajouter un titulaire</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font/>
+                   </property>
+                   <property name="text">
+                    <string>Nom</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextEdit" name="t_txtName">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: red;
+-webkit-text-security: disc; 
+</string>
+                   </property>
+                   <property name="html">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font/>
+                   </property>
+                   <property name="text">
+                    <string>Prénom</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextEdit" name="t_txtFName">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: black;</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font/>
+                   </property>
+                   <property name="text">
+                    <string>Date de naissance</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateEdit" name="t_birthDate">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font/>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: black;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="t_lblClub">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font/>
+                   </property>
+                   <property name="text">
+                    <string>Club</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="t_listClub">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Numéro de plaque</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextEdit" name="t_txtPlaque">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: black;</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="t_lblSexe">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Sexe</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="styleSheet">
+                 <string notr="true">#t_btnAdd {
+	background-color: white;
+	color: #0d6efd;
+	border: 1px solid #0d6efd;
+	border-radius: 5px;
+	font-size: 15px;
+}
+#t_btnAdd:hover {
+	background-color:#0d6efd ;
+	color:  white;
+}</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="t_btnAdd">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Ajouter</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="tituRight" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="wChampionnats">
+          <widget class="QPushButton" name="pushButton">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>100</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>oui</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionoui">
+   <property name="text">
+    <string>oui</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
