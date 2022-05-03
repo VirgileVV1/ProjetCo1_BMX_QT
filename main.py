@@ -1,9 +1,8 @@
 # This Python file uses the following encoding: utf-8
 import sys
 from PyQt6 import QtWidgets
-
-from Controleur.Windows import ConnectionWindow
-
+from Controleur.connectionWindow import connectionWindow
+from Controleur.MainWindowSecond import MainWindowSecond
 #from Controleur.mainwindow import MainWindowSecond
 
 #print('__file__={0:<35} | __name__={1:<25} | __package__={2:<25}'.format(__file__,__name__,str(__package__)))
@@ -22,7 +21,7 @@ fichier mainwindow_ui.py mais bien celle qui se trouve dans ce fichier
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    connWin = ConnectionWindow(MainWindow)
+    connWin = connectionWindow(MainWindow)
     MainWindow.show()
     
     sys.exit(app.exec())

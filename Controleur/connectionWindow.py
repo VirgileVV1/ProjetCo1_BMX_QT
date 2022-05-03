@@ -1,5 +1,13 @@
 # This Python file uses the following encoding: utf-8
-"""
+import os
+from pathlib import Path
+import sys
+import PyQt6
+
+from PySide2.QtWidgets import QApplication, QMainWindow
+from PySide2.QtCore import QFile
+from PySide2.QtUiTools import QUiLoader
+
 from Controleur.MainWindowSecond import MainWindowSecond
 from Vue.connectionWindow_ui import Ui_connectionWindow
 
@@ -24,5 +32,5 @@ def connection(username, mdp):
     if (username == "ufolep" and mdp =="ufolep2021"):
         return True
     return False
-"""
+
 
